@@ -57,11 +57,14 @@ mvn archetype:generate -DarchetypeGroupId=io.github.dddplus -DarchetypeArtifactI
 需要领域专家和研发同学共同参与完成。
 
 `创建上架任务`从业务上被抽象成如下步骤来完成：
-- 基本数据校验
+- 防重校验
 - 通过RPC调用`人工智能系统：推荐储位`服务
    - 一个sku，可能推荐到多个储位
    - 因此需要根据数量拆分
 - 库存查询商品保质期
+- 落库保存，等待后续的任务分配
+
+### 多场景下业务多态
 
 ### 开发内容
 
@@ -69,8 +72,7 @@ mvn archetype:generate -DarchetypeGroupId=io.github.dddplus -DarchetypeArtifactI
    - 定义领域步骤
 - wms-ib-infrastructure 模块，实现所有相关
    - 包括事务
-   - 此处省略了 cache/DAO/MQ 等实现
-   - RPC基于dubbo，也省略了具体实现
+   - 此处省略了 cache/DAO/MQ/RPC dubbo 等实现
 
 [github上查看该项工作成果](https://github.com/dddplus/dddplus-archetype-demo/compare/minute-2...minute-3).
 
