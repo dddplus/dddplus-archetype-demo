@@ -6,6 +6,13 @@ package io.wms.ib.spec;
 public interface Steps {
 
     /**
+     * 领域活动：添加上架任务.
+     */
+    interface AddShelvingTask {
+        String Activity = "addShelvingTask";
+    }
+
+    /**
      * 统一定义所有的步骤标签.
      */
     interface Tags {

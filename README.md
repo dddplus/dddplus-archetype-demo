@@ -19,13 +19,21 @@ Using [dddplus-archetype](https://github.com/dddplus/dddplus-archetype) build a 
 mvn archetype:generate -DarchetypeGroupId=io.github.dddplus -DarchetypeArtifactId=dddplus-archetype -DarchetypeVersion=1.0.2-SNAPSHOT -DgroupId=io.wms -DartifactId=wms-ib -Dpackage=io.wms.ib -Dversion=1.0.0-SNAPSHOT -DinteractiveMode=false
 ```
 
-## 第二分钟：设计上架任务用例
+[github上查看本次工作成果](https://github.com/dddplus/dddplus-archetype-demo/compare/7e150d0...minute-1).
+
+## 第二分钟：实现`创建上架任务`用例的骨架
+
+[github上查看本次工作成果](https://github.com/dddplus/dddplus-archetype-demo/compare/minute-1...minute-2).
 
 ### 业务介绍
 
-## 第三分钟：
+**创建上架任务**，是指货物已送达仓库，完成了扫码、验收，现在要存放到库房的储区货架上。
 
-## 第四分钟：
+`上架`，这里使用英文`shelving`。
 
-## 第五分钟：
+### 骨架内容
+
+见[wms-ib的分层设计](wms-ib/README.md)，自上而下开始写代码。
+
+## 后三分钟：完成`创建上架任务`业务逻辑
 

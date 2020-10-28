@@ -17,6 +17,10 @@
             <groupId>io.wms</groupId>
             <artifactId>wms-ib-infrastructure</artifactId>
         </dependency>
+        <dependency>
+            <groupId>io.wms</groupId>
+            <artifactId>wms-ib-api</artifactId>
+        </dependency>
 
         <dependency>
             <groupId>org.mapstruct</groupId>
