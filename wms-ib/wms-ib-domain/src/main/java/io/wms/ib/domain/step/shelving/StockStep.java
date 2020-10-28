@@ -15,6 +15,6 @@ public class StockStep extends AddShelvingTaskStep {
 
     @Override
     public String stepCode() {
-        return Steps.AddShelvingTask.Step.Stock;
+        return Steps.AddShelvingTask.StepCode.Stock;
     }
 }

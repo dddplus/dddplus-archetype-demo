@@ -11,7 +11,7 @@ public interface Steps {
     interface AddShelvingTask {
         String Activity = "addShelvingTask";
 
-        interface Step {
+        interface StepCode {
             /**
              * 防重校验.
              */

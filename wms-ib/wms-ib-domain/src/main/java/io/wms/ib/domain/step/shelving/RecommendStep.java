@@ -15,6 +15,6 @@ public class RecommendStep extends AddShelvingTaskStep {
 
     @Override
     public String stepCode() {
-        return Steps.AddShelvingTask.Step.Recommend;
+        return Steps.AddShelvingTask.StepCode.Recommend;
     }
 }
