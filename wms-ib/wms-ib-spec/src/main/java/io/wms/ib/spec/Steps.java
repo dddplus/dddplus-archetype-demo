@@ -10,6 +10,28 @@ public interface Steps {
      */
     interface AddShelvingTask {
         String Activity = "addShelvingTask";
+
+        interface Step {
+            /**
+             * 防重校验.
+             */
+            String NoConcurrency = "noConcurrency";
+
+            /**
+             * 推荐储位.
+             */
+            String Recommend = "recommend";
+
+            /**
+             * 库存
+             */
+            String Stock = "stock";
+
+            /**
+             * 落库.
+             */
+            String Persist = "persist";
+        }
     }
 
     /**

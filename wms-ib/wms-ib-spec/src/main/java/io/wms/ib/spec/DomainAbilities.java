@@ -5,4 +5,6 @@ package io.wms.ib.spec;
  */
 public interface DomainAbilities {
 
+    String decideSteps = "decideSteps";
+
 }
