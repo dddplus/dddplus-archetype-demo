@@ -29,6 +29,8 @@ mvn archetype:generate -DarchetypeGroupId=io.github.dddplus -DarchetypeArtifactI
 
 **创建上架任务**，是指货物已送达仓库，完成了扫码、验收，现在要存放到库房的储区货架上。
 
+具体地，仓库工人会对货品进行验收，利用手持设备扫描每个商品条码，都完成后点击`验收完毕`按钮，服务器会调用`创建上架任务`API，本演示就是要完成该API。
+
 `上架`，这里使用英文`shelving`。
 
 ### 开发内容
@@ -36,9 +38,10 @@ mvn archetype:generate -DarchetypeGroupId=io.github.dddplus -DarchetypeArtifactI
 - wms-ib-api 模块，定义对外暴露的API
 - wms-ib-facade 模块，实现该API
 - wms-ib-application 模块，编排领域服务，在 use case 层实现该API
-- wms-ib-domain 模块，实现核心业务逻辑，并通过依赖倒置定义infrastructure层需要实现的技术细节接口
+- wms-ib-domain 模块，实现核心业务逻辑
    - 定义领域模型、领域服务
    - wms-ib-spec 模块，定义领域模型规范
+   - 通过依赖倒置定义基础设施层需要实现的技术细节接口
 - wms-ib-infrastructure 模块，实现领域层要求的技术细节接口
    - 定义物理模型
 - wms-ib-test 模块，单元测试模块，主要针对domain层编写测试用例
