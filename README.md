@@ -1,5 +1,5 @@
 # dddplus-archetype-demo
-Using [dddplus-archetype](https://github.com/dddplus/dddplus-archetype) build a WMS. 利用 [dddplus-archetype](https://github.com/dddplus/dddplus-archetype) 5分钟搭建一个仓储系统WMS！
+Using [dddplus-archetype](https://github.com/dddplus/dddplus-archetype) build a WMS in 5 minutes. 利用 [dddplus-archetype](https://github.com/dddplus/dddplus-archetype) 5分钟搭建一个仓储系统WMS！
 
 ## 演示简介
 
