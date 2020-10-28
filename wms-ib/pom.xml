@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>io.wms</groupId>
+    <artifactId>wms-ib</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0.0-SNAPSHOT</version>
+
+    <name>wms-ib</name>
+
+    <properties>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <java.version>1.8</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+        <lombok.version>1.18.8</lombok.version>
+        <slf4j.version>1.7.25</slf4j.version>
+        <junit.version>4.13.1</junit.version>
+        <jacoco.version>0.8.5</jacoco.version>
+        <spring.version>4.3.12.RELEASE</spring.version>
+        <mapstruct.version>1.3.1.Final</mapstruct.version>
+
+        <dddplus.version>1.0.1</dddplus.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!--DDDplus-->
+            <dependency>
+                <groupId>io.github.dddplus</groupId>
+                <artifactId>dddplus-spec</artifactId>
+                <version>${dddplus.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.dddplus</groupId>
+                <artifactId>dddplus-runtime</artifactId>
+                <version>${dddplus.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.dddplus</groupId>
+                <artifactId>dddplus-enforce</artifactId>
+                <version>${dddplus.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.dddplus</groupId>
+                <artifactId>dddplus-unit</artifactId>
+                <version>${dddplus.version}</version>
+            </dependency>
+
+            <!--project modules-->
+            <dependency>
+                <groupId>io.wms</groupId>
+                <artifactId>wms-ib-spec</artifactId>
+                <version>1.0.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>io.wms</groupId>
+                <artifactId>wms-ib-application</artifactId>
+                <version>1.0.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>io.wms</groupId>
+                <artifactId>wms-ib-domain</artifactId>
+                <version>1.0.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>io.wms</groupId>
+                <artifactId>wms-ib-infrastructure</artifactId>
+                <version>1.0.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>io.wms</groupId>
+                <artifactId>wms-ib-facade</artifactId>
+                <version>1.0.0-SNAPSHOT</version>
+            </dependency>
+
+            <!-- third party sdk -->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+                <scope>provided</scope>
+                <optional>true</optional>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mapstruct</groupId>
+                <artifactId>mapstruct</artifactId>
+                <version>${mapstruct.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <defaultGoal>package</defaultGoal>
+
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.21.0</version>
+                <configuration>
+                    <skipTests>false</skipTests>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>${jacoco.version}</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+<modules>  <module>wms-ib-application</module>
+    <module>wms-ib-facade</module>
+    <module>wms-ib-domain</module>
+    <module>wms-ib-spec</module>
+    <module>wms-ib-infrastructure</module>
+    <module>wms-ib-test</module>
+  </modules>
+</project>

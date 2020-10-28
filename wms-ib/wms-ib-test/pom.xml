@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>io.wms</groupId>
+        <artifactId>wms-ib</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>wms-ib-test</artifactId>
+    <name>wms-ib-test</name>
+
+    <dependencies>
+        <!-- project modules -->
+        <dependency>
+            <groupId>io.wms</groupId>
+            <artifactId>wms-ib-spec</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.wms</groupId>
+            <artifactId>wms-ib-domain</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.wms</groupId>
+            <artifactId>wms-ib-infrastructure</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.wms</groupId>
+            <artifactId>wms-ib-application</artifactId>
+        </dependency>
+
+        <!-- DDDplus -->
+        <dependency>
+            <groupId>io.github.dddplus</groupId>
+            <artifactId>dddplus-unit</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.github.dddplus</groupId>
+            <artifactId>dddplus-enforce</artifactId>
+        </dependency>
+
+        <!-- logging -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+        </dependency>
+        <dependency>
+            <artifactId>log4j-core</artifactId>
+            <groupId>org.apache.logging.log4j</groupId>
+            <version>2.13.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-slf4j-impl</artifactId>
+            <version>2.13.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-jcl</artifactId>
+            <version>2.13.2</version>
+        </dependency>
+
+        <!-- test framework -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <!-- benchmark test -->
+        <dependency>
+            <groupId>com.google.caliper</groupId>
+            <artifactId>caliper</artifactId>
+            <version>1.0-beta-2</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <configuration>
+                    <excludes>
+                    </excludes>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>report-aggregate</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>report-aggregate</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>
