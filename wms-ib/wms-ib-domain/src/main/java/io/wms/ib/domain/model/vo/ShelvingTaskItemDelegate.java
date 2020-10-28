@@ -1,11 +1,16 @@
 package io.wms.ib.domain.model.vo;
 
 import io.wms.ib.domain.model.ShelvingTaskCreator;
+import io.wms.ib.spec.model.vo.IShelvingTaskItem;
 import io.wms.ib.spec.model.vo.IShelvingTaskItemDelegate;
+import lombok.Getter;
 
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 上架任务明细的管理器.
+ */
 public class ShelvingTaskItemDelegate implements IShelvingTaskItemDelegate {
 
     private List<ShelvingTaskItem> items;
@@ -28,7 +33,13 @@ public class ShelvingTaskItemDelegate implements IShelvingTaskItemDelegate {
         }
     }
 
+    @Override
     public int size() {
         return items.size();
+    }
+
+    @Override
+    public List<? extends IShelvingTaskItem> items() {
+        return items;
     }
 }

@@ -1,11 +1,12 @@
 package io.wms.ib.domain.model.vo;
 
+import io.wms.ib.spec.model.vo.IShelvingTaskItem;
 import lombok.Data;
 
 import java.math.BigDecimal;
 
 @Data
-public class ShelvingTaskItem {
+public class ShelvingTaskItem implements IShelvingTaskItem {
 
     private String orderNo; // 对应的订单号
 

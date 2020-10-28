@@ -7,6 +7,9 @@ import io.wms.ib.spec.ext.IbException;
 
 import javax.validation.constraints.NotNull;
 
+/**
+ * 添加上架任务活动.
+ */
 public abstract class AddShelvingTaskStep implements IRevokableDomainStep<ShelvingTask, IbException> {
 
     @Override

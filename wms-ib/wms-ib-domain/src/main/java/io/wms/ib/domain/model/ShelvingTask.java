@@ -14,6 +14,9 @@ import lombok.extern.slf4j.Slf4j;
 public class ShelvingTask implements IShelvingTask {
 
     @Getter
+    private Long id;
+
+    @Getter
     private String containerNo; // 容器号
 
     @Getter
@@ -42,6 +45,14 @@ public class ShelvingTask implements IShelvingTask {
     private ShelvingTask validate() throws IbException {
         // TODO
         return this;
+    }
+
+    public void assignId(Object who, Long id) {
+        if (!who.getClass().getSimpleName().toLowerCase().contains("repository")) {
+            throw IbException.ofCode("PermissionDenied");
+        }
+
+        this.id = id;
     }
 
     @Override

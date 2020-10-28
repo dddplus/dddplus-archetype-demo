@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Slf4j
-public class ShelvingTaskStepsExec extends StepsExecTemplate<AddShelvingTaskStep, ShelvingTask> {
+public class ShelvingTaskStepsExecutor extends StepsExecTemplate<AddShelvingTaskStep, ShelvingTask> {
 
     @Override
     protected void beforeStep(AddShelvingTaskStep step, ShelvingTask model) {
