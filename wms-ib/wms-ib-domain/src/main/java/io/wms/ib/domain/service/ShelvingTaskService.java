@@ -6,7 +6,7 @@ import io.github.dddplus.runtime.DDD;
 import io.wms.ib.domain.CoreDomain;
 import io.wms.ib.domain.ability.DecideStepsAbility;
 import io.wms.ib.domain.model.ShelvingTask;
-import io.wms.ib.domain.step.ShelvingTaskStepsExec;
+import io.wms.ib.domain.step.shelving.ShelvingTaskStepsExec;
 import io.wms.ib.spec.Steps;
 import lombok.extern.slf4j.Slf4j;
 
