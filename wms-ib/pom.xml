@@ -22,7 +22,7 @@
         <spring.version>4.3.12.RELEASE</spring.version>
         <mapstruct.version>1.3.1.Final</mapstruct.version>
 
-        <dddplus.version>1.0.1</dddplus.version>
+        <dddplus.version>1.0.2-SNAPSHOT</dddplus.version>
     </properties>
 
     <dependencyManagement>
@@ -73,6 +73,16 @@
             <dependency>
                 <groupId>io.wms</groupId>
                 <artifactId>wms-ib-facade</artifactId>
+                <version>1.0.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>io.wms</groupId>
+                <artifactId>wms-ib-api</artifactId>
+                <version>1.0.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>io.wms</groupId>
+                <artifactId>wms-ib-main</artifactId>
                 <version>1.0.0-SNAPSHOT</version>
             </dependency>
 
@@ -127,7 +137,9 @@
     <module>wms-ib-facade</module>
     <module>wms-ib-domain</module>
     <module>wms-ib-spec</module>
+    <module>wms-ib-api</module>
     <module>wms-ib-infrastructure</module>
+    <module>wms-ib-main</module>
     <module>wms-ib-test</module>
   </modules>
 </project>
