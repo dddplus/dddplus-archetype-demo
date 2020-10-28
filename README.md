@@ -9,12 +9,12 @@ Using [dddplus-archetype](https://github.com/dddplus/dddplus-archetype) build a 
 - 出库管理
 - 基础数据
 
-本演示的目标是快速搭建一个WMS的入库(inbound，简称ib)中台。
+本演示目标：快速搭建一个WMS的入库(inbound，简称ib)中台。
 
 ## 第一分钟：利用dddplus-archtype创建项目
 
 ``` bash
-mvn archetype:generate -DarchetypeGroupId=io.github.dddplus -DarchetypeArtifactId=dddplus-archetype -DarchetypeVersion=1.0.1 -DgroupId=com.foo -DartifactId=demo -Dpackage=com.foo -Dversion=1.0.0-SNAPSHOT -DinteractiveMode=false
+mvn archetype:generate -DarchetypeGroupId=io.github.dddplus -DarchetypeArtifactId=dddplus-archetype -DarchetypeVersion=1.0.1 -DgroupId=io.wms -DartifactId=wms-ib -Dpackage=io.wms.ib -Dversion=1.0.0-SNAPSHOT -DinteractiveMode=false
 ```
 
 ## 第二分钟：
