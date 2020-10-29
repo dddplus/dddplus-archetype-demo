@@ -7,6 +7,8 @@ import io.wms.ib.spec.model.vo.IShelvingTaskItemDelegate;
 import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
 
+import java.util.Date;
+
 /**
  * 上架任务聚合根.
  */
@@ -25,6 +27,9 @@ public class ShelvingTask implements IShelvingTask {
     @Getter
     private String warehouseNo; // 仓库号
 
+    @Getter
+    private Date createTime;
+
     // 上架任务明细，不使用java List直接放到ShelvingTask，而是单独拿一个delegate VO管理起来：这样更方便建立充血模型
     private ShelvingTaskItemDelegate itemDelegate;
 
@@ -38,6 +43,7 @@ public class ShelvingTask implements IShelvingTask {
         this.containerNo = creator.getContainerNo();
         this.areaNo = creator.getAreaNo();
         this.warehouseNo = creator.getWarehouseNo();
+        this.createTime = new Date();
 
         this.itemDelegate = ShelvingTaskItemDelegate.createWith(creator);
     }
