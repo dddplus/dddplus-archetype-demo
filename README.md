@@ -31,7 +31,7 @@ mvn archetype:generate -DarchetypeGroupId=io.github.dddplus -DarchetypeArtifactI
 
 具体地，仓库工人会对货品进行验收，利用手持设备扫描每个商品条码，都完成后点击`验收完毕`按钮，服务器会调用`创建上架任务`API。
 
-本演示就是要完成该API。
+本演示就是要完成该API，通过`Apache Dubbo`形式提供。
 
 `上架`，这里使用英文`shelving`。
 
