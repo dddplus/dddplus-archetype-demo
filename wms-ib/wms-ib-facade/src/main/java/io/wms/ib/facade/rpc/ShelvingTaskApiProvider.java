@@ -5,7 +5,7 @@ import io.github.dddplus.api.RequestProfile;
 import io.wms.ib.api.ShelvingTaskApi;
 import io.wms.ib.api.dto.AddShelvingTaskRequest;
 import io.wms.ib.api.dto.AddShelvingTaskResponse;
-import io.wms.ib.app.service.ShelvingTaskMashup;
+import io.wms.ib.app.service.ShelvingTaskUseCase;
 import org.slf4j.MDC;
 import org.springframework.stereotype.Component;
 
@@ -16,7 +16,7 @@ import javax.validation.constraints.NotNull;
 public class ShelvingTaskApiProvider implements ShelvingTaskApi {
 
     @Resource
-    private ShelvingTaskMashup shelvingTaskMashup;
+    private ShelvingTaskUseCase shelvingTaskUseCase;
 
     @Override
     public ApiResult<AddShelvingTaskResponse> addTask(@NotNull RequestProfile profile, @NotNull AddShelvingTaskRequest request) {
@@ -31,7 +31,7 @@ public class ShelvingTaskApiProvider implements ShelvingTaskApi {
         // 出于演示，这里省略了JSR303的数据校验实现
         ApiResult<AddShelvingTaskResponse> apiResult = new ApiResult<>();
         try {
-            AddShelvingTaskResponse response = shelvingTaskMashup.addTask(profile, request);
+            AddShelvingTaskResponse response = shelvingTaskUseCase.addTask(profile, request);
             apiResult.setCode("0");
             apiResult.setData(response);
             return apiResult;

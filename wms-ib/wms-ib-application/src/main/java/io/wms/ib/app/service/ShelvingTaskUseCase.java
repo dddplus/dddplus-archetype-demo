@@ -15,10 +15,10 @@ import javax.validation.constraints.NotNull;
 /**
  * 上架任务的application service: mashup.
  *
- * <p>ApplicationService，是use case层，负责对领域服务进行编排：mashup</p>
+ * <p>ApplicationService，是use case层，负责对领域服务进行编排</p>
  */
 @Component
-public class ShelvingTaskMashup {
+public class ShelvingTaskUseCase {
 
     @Resource
     private ShelvingTaskService shelvingTaskService;
