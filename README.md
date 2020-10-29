@@ -19,7 +19,7 @@ Using [dddplus-archetype](https://github.com/dddplus/dddplus-archetype) build a 
 mvn archetype:generate -DarchetypeGroupId=io.github.dddplus -DarchetypeArtifactId=dddplus-archetype -DarchetypeVersion=1.0.2-SNAPSHOT -DgroupId=io.wms -DartifactId=wms-ib -Dpackage=io.wms.ib -Dversion=1.0.0-SNAPSHOT -DinteractiveMode=false
 ```
 
-[github上查看该项工作成果](https://github.com/dddplus/dddplus-archetype-demo/compare/7e150d0...minute-1).
+[github上查看该步骤提交的代码](https://github.com/dddplus/dddplus-archetype-demo/compare/7e150d0...minute-1).
 
 该过程，不需要开发代码，完全自动生成。
 
@@ -48,7 +48,7 @@ mvn archetype:generate -DarchetypeGroupId=io.github.dddplus -DarchetypeArtifactI
    - 定义物理模型
 - wms-ib-test 模块，单元测试模块，主要针对domain层编写测试用例
 
-[github上查看该项工作成果](https://github.com/dddplus/dddplus-archetype-demo/compare/minute-1...minute-2).
+[github上查看该步骤提交的代码](https://github.com/dddplus/dddplus-archetype-demo/compare/minute-1...minute-2).
 
 ## 后三分钟：完成`创建上架任务`业务逻辑
 
@@ -60,7 +60,8 @@ mvn archetype:generate -DarchetypeGroupId=io.github.dddplus -DarchetypeArtifactI
 - 根据上架任务编号进行防重校验
 - 通过RPC调用`人工智能系统：推荐储位`服务
    - 一个sku，可能推荐到多个储位
-   - 因此需要根据数量拆分
+   - 因此需要根据储位数量重新拆分上架任务明细
+      - 例如：上架要求是2个明细项，推荐储位计算后可能拆分成3个
 - 储位库存预占
 - 落库保存，等待后续的任务分配
 - 上架任务的冗余数据预加载，以提升真正上架时的工人效率
@@ -85,11 +86,12 @@ mvn archetype:generate -DarchetypeGroupId=io.github.dddplus -DarchetypeArtifactI
 
 - wms-ib-domain 模块
    - 定义领域步骤
+   - 补充领域模型
 - wms-ib-infrastructure 模块，实现所有相关
    - 包括事务
    - 此处省略了 cache/DAO/MQ/RPC dubbo 等实现
 
-[github上查看该项工作成果](https://github.com/dddplus/dddplus-archetype-demo/compare/minute-2...minute-3).
+[github上查看该步骤提交的代码](https://github.com/dddplus/dddplus-archetype-demo/compare/minute-2...minute-3).
 
 ## 后续
 
