@@ -18,6 +18,8 @@ public class AddShelvingTaskRequest implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @NotNull
+    private String taskNo; // 任务编号，上游负责同一个任务的唯一性
+    @NotNull
     private String containerNo; // 容器号
     @NotNull
     private String areaNo; // 储区号

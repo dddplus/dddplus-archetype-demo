@@ -19,6 +19,9 @@ public class ShelvingTask implements IShelvingTask {
     private Long id;
 
     @Getter
+    private String taskNo;
+
+    @Getter
     private String containerNo; // 容器号
 
     @Getter
@@ -43,6 +46,7 @@ public class ShelvingTask implements IShelvingTask {
         this.containerNo = creator.getContainerNo();
         this.areaNo = creator.getAreaNo();
         this.warehouseNo = creator.getWarehouseNo();
+        this.taskNo = creator.getTaskNo();
         this.createTime = new Date();
 
         this.itemDelegate = ShelvingTaskItemDelegate.createWith(creator);

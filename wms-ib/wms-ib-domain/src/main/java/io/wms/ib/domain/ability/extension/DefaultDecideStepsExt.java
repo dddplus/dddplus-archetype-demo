@@ -24,10 +24,11 @@ public class DefaultDecideStepsExt implements IDecideStepsExt {
     private static Map<String, List<String>> stepsRegistry = new HashMap<>();
     static {
         List<String> addShelvingTaskSteps = new ArrayList<>();
-        addShelvingTaskSteps.add(Steps.AddShelvingTask.StepCode.NoConcurrency);
-        addShelvingTaskSteps.add(Steps.AddShelvingTask.StepCode.Stock);
+        addShelvingTaskSteps.add(Steps.AddShelvingTask.StepCode.AntiDup);
         addShelvingTaskSteps.add(Steps.AddShelvingTask.StepCode.Recommend);
+        addShelvingTaskSteps.add(Steps.AddShelvingTask.StepCode.Stock);
         addShelvingTaskSteps.add(Steps.AddShelvingTask.StepCode.Persist);
+        addShelvingTaskSteps.add(Steps.AddShelvingTask.StepCode.Preload);
         stepsRegistry.put(Steps.AddShelvingTask.Activity, addShelvingTaskSteps);
     }
 }

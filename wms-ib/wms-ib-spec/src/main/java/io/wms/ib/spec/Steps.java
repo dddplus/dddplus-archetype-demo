@@ -15,7 +15,7 @@ public interface Steps {
             /**
              * 防重校验.
              */
-            String NoConcurrency = "noConcurrency";
+            String AntiDup = "antiDup";
 
             /**
              * 推荐储位.
@@ -23,9 +23,14 @@ public interface Steps {
             String Recommend = "recommend";
 
             /**
-             * 库存
+             * 库存.
              */
             String Stock = "stock";
+
+            /**
+             * 从主数据中心提前预加载数据.
+             */
+            String Preload = "preload";
 
             /**
              * 落库.
@@ -38,6 +43,9 @@ public interface Steps {
      * 统一定义所有的步骤标签.
      */
     interface Tags {
-
+        /**
+         * 处于性能考虑.
+         */
+        String Performance = "perf";
     }
 }

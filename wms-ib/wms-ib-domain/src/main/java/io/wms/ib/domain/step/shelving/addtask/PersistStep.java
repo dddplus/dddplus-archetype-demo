@@ -1,9 +1,9 @@
-package io.wms.ib.domain.step.shelving;
+package io.wms.ib.domain.step.shelving.addtask;
 
 import io.github.dddplus.annotation.Step;
 import io.wms.ib.domain.facade.repository.IShelvingTaskRepository;
 import io.wms.ib.domain.model.ShelvingTask;
-import io.wms.ib.domain.step.AddShelvingTaskStep;
+import io.wms.ib.domain.step.shelving.AddShelvingTaskStep;
 import io.wms.ib.spec.Steps;
 import io.wms.ib.spec.ext.IbException;
 

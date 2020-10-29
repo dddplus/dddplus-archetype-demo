@@ -16,6 +16,8 @@ import java.util.List;
 @ToString
 public class ShelvingTaskCreator implements IDomainModelCreator {
 
+    private String taskNo;
+
     private String containerNo; // 容器号
 
     private String areaNo; // 储区号
