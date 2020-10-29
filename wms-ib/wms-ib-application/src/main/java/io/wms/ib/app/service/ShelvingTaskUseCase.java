@@ -13,9 +13,9 @@ import javax.annotation.Resource;
 import javax.validation.constraints.NotNull;
 
 /**
- * 上架任务的application service: mashup.
+ * 上架任务的application service: use case层.
  *
- * <p>ApplicationService，是use case层，负责对领域服务进行编排</p>
+ * <p>负责对领域服务进行编排</p>
  */
 @Component
 public class ShelvingTaskUseCase {
