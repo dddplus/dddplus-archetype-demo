@@ -2,7 +2,7 @@
 Using [dddplus-archetype](https://github.com/dddplus/dddplus-archetype) build a WMS in 5 minutes. 利用 [dddplus-archetype](https://github.com/dddplus/dddplus-archetype) 5分钟搭建一个仓储系统WMS！
 
 ![Requirement](https://img.shields.io/badge/JDK-8+-green.svg)
-[![DDDplus version](https://img.shields.io/badge/dddplus-1.0.2--SNAPSHOT-blue)](https://github.com/funkygao/cp-ddd-framework)
+[![DDDplus version](https://img.shields.io/badge/DDDplus-1.0.2--SNAPSHOT-blue)](https://github.com/funkygao/cp-ddd-framework)
 
 ## 演示简介
 
