@@ -19,7 +19,13 @@ Using [dddplus-archetype](https://github.com/dddplus/dddplus-archetype) build a 
 ## 第一分钟：利用dddplus-archtype创建项目
 
 ``` bash
-mvn archetype:generate -DarchetypeGroupId=io.github.dddplus -DarchetypeArtifactId=dddplus-archetype -DarchetypeVersion=1.0.2-SNAPSHOT -DgroupId=io.wms -DartifactId=wms-ib -Dpackage=io.wms.ib -Dversion=1.0.0-SNAPSHOT -DinteractiveMode=false
+mvn archetype:generate                              \
+    -DarchetypeGroupId=io.github.dddplus            \
+    -DarchetypeArtifactId=dddplus-archetype         \
+    -DarchetypeVersion=1.0.2-SNAPSHOT               \
+    -DgroupId=io.wms -DartifactId=wms-ib            \
+    -Dpackage=io.wms.ib -Dversion=1.0.0-SNAPSHOT    \
+    -B
 ```
 
 [github上查看该步骤提交的代码](https://github.com/dddplus/dddplus-archetype-demo/compare/7e150d0...minute-1).
