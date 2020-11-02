@@ -1,6 +1,8 @@
 # dddplus-archetype-demo
 Using [dddplus-archetype](https://github.com/dddplus/dddplus-archetype) build a WMS in 5 minutes. 利用 [dddplus-archetype](https://github.com/dddplus/dddplus-archetype) 5分钟搭建一个仓储系统WMS！
 
+![Requirement](https://img.shields.io/badge/JDK-8+-green.svg)
+
 ## 演示简介
 
 仓储系统，WMS(warehouse managment system)，在整个供应链中起着至关重要的作用，它主要由四大部分组成：
