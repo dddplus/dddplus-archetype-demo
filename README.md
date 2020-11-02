@@ -83,6 +83,10 @@ mvn archetype:generate -DarchetypeGroupId=io.github.dddplus -DarchetypeArtifactI
    - 整箱上架
    - 拆箱上架
    - etc
+- 每个仓库的设备、场地、规模、运营要求等不同，上架会有不同
+- 标准件商品和异形商品上架会不同
+- 不同KA可能在对上架任务有要求，例如是否允许混分、拆包
+- 有些行业可能对上架也有特殊要求，例如：医药，冷链等
 
 ### 开发内容
 
